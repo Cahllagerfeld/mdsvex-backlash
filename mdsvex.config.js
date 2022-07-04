@@ -9,9 +9,9 @@ const config = defineConfig({
       const highlighted = escapeSvelte(
         Prism.highlight(code, Prism.languages["bash"], "bash")
       );
-      return `<pre class="language-${lang}">{@html \`<code class="language-${lang}">${JSON.stringify(
+      return `<pre class="language-${lang}"><code class="language-${lang}">{@html ${JSON.stringify(
         highlighted
-      ).replace(/(^"|"$)/g, "")}</code>\`}</pre>`;
+      )}}</code></pre>`;
     },
   },
   smartypants: {
